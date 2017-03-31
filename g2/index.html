@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/sticky.css" rel="stylesheet" type="text/css">
+    <!-- Title -->
+    <title>ScratchCard Demo</title>
+    <!-- Description -->
+    <meta name="description" content="">
+    <!-- Index, Follow -->
+    <meta name="robots" content="noindex,nofollow" />
+
+    <!-- Fonts -->
+    <link href="css/css.css" rel="stylesheet">
+    <link href="css/css1.css" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/Scratch.js"></script>
+</head>
+
+<body>
+<h1 class="title-main">ScratchCard Demo</h1>
+
+
+<div class="max-width">
+    <div class="scratch_container">
+        <div class="scratch_viewport">
+            <!-- result picture -->
+            <canvas id="js-scratch-canvas"></canvas>
+        </div>
+    </div>
+</div>
+
+    <script type="text/javascript">
+
+        var scratch = new Scratch({
+            canvasId: 'js-scratch-canvas',
+            imageBackground: './images/loose.jpg',
+            pictureOver: './images/foreground.jpg',
+            cursor: {
+                png: './images/piece.png',
+                cur: './images/piece.cur',
+                x: '20',
+                y: '17'
+            },
+            radius: 20,
+            nPoints: 100,
+            percent: 50,
+            callback: function () {
+                alert('I am Callback.');
+            },
+            pointSize: { x: 3, y: 3}
+        });
+
+    </script>
+</body>
+</html>
